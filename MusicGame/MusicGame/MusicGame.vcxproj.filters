@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="メイン">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="システム関係">
+      <UniqueIdentifier>{0fd037d4-0e93-4d6a-bd4c-9fc0b770f449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム関係\ウィンドウ">
+      <UniqueIdentifier>{d09499ce-a863-498a-80ab-196245f69ec5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム関係\入力">
+      <UniqueIdentifier>{9080b61d-20f0-4a04-b0ee-2c32b0866ba5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム関係\シェーダ">
+      <UniqueIdentifier>{aedfeb38-21c2-436a-bfdd-fb821bbad067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム関係\エラー">
+      <UniqueIdentifier>{1f48d6aa-7c1a-4332-8768-4b29ee1e79b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム関係\Fps">
+      <UniqueIdentifier>{e0d6af41-9cf4-44e4-acc4-6e80515072cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム関係\描画">
+      <UniqueIdentifier>{a8610ce0-eefb-4dc1-8a48-70529e4824ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム関係\デバイス">
+      <UniqueIdentifier>{48182b63-01d7-46c9-bdf1-c3a0a8021175}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="シーン">
+      <UniqueIdentifier>{22d92907-ba9c-4ca3-8986-686b86692e26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="シーン\テスト">
+      <UniqueIdentifier>{ff073acc-bda6-4347-bd79-547040a637a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>メイン</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowManager.cpp">
+      <Filter>システム関係\ウィンドウ</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceManager.cpp">
+      <Filter>システム関係\デバイス</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>システム関係\入力</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderManager.cpp">
+      <Filter>システム関係\シェーダ</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexShaderManager.cpp">
+      <Filter>システム関係\シェーダ</Filter>
+    </ClCompile>
+    <ClCompile Include="PixelShaderManager.cpp">
+      <Filter>システム関係\シェーダ</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderBase.cpp">
+      <Filter>システム関係\シェーダ</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorMessageManager.cpp">
+      <Filter>システム関係\エラー</Filter>
+    </ClCompile>
+    <ClCompile Include="FpsManager.cpp">
+      <Filter>システム関係\Fps</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderManager.cpp">
+      <Filter>システム関係\描画</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneBase.cpp">
+      <Filter>シーン</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>シーン</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>シーン</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTest.cpp">
+      <Filter>シーン\テスト</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>メイン</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowManager.h">
+      <Filter>システム関係\ウィンドウ</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceManager.h">
+      <Filter>システム関係\デバイス</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>システム関係\入力</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderManager.h">
+      <Filter>システム関係\シェーダ</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexShaderManager.h">
+      <Filter>システム関係\シェーダ</Filter>
+    </ClInclude>
+    <ClInclude Include="PixelShaderManager.h">
+      <Filter>システム関係\シェーダ</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderBase.h">
+      <Filter>システム関係\シェーダ</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorMessageManager.h">
+      <Filter>システム関係\エラー</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorMessageDefine.h">
+      <Filter>システム関係\エラー</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderDefine.h">
+      <Filter>システム関係\シェーダ</Filter>
+    </ClInclude>
+    <ClInclude Include="FpsManager.h">
+      <Filter>システム関係\Fps</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderManager.h">
+      <Filter>システム関係\描画</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderDefine.h">
+      <Filter>システム関係\描画</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneBase.h">
+      <Filter>シーン</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleScene.h">
+      <Filter>シーン</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>シーン</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneTest.h">
+      <Filter>シーン\テスト</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDefine.h">
+      <Filter>シーン</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
