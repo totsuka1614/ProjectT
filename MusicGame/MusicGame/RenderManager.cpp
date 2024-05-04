@@ -11,6 +11,7 @@
 
 //インクルード
 #include "RenderManager.h"
+#include "ShaderManager.h"
 #include "DeviceManager.h"
 #include "WindowManager.h"
 //*****************************************************************************
@@ -47,6 +48,9 @@ HRESULT CRenderManager::Init(void)
 	hr = CreateRenderTargetView();
 	if (FAILED(hr))
 		return hr;
+
+	//シェーダ作成
+	ShaderManager->Create();
 
 	//Zバッファ/ステンシルバッファ作成	//物体の前後を知る
 	hr = CreateDepthAndStencilView();

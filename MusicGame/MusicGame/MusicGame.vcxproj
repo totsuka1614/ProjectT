@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Program Files\Autodesk\FBX\FBX SDK\2020.3.4\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -108,11 +108,16 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\DirectXTex;..\ImGui;..\FBX SDK\2020.3.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\DirectXTex\$(PlatformTarget)\$(Configuration);..\FBX SDK\2020.3.4\lib\vs2022\$(PlatformTarget)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <FxCompile>
+      <ObjectFileOutput>$(ProjectDir)data\shader\%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -133,21 +138,26 @@
   <ItemGroup>
     <ClCompile Include="DeviceManager.cpp" />
     <ClCompile Include="ErrorMessageManager.cpp" />
+    <ClCompile Include="FbxLoadManager.cpp" />
     <ClCompile Include="FpsManager.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="PixelShaderManager.cpp" />
+    <ClCompile Include="PixelShader.cpp" />
     <ClCompile Include="RenderManager.cpp" />
     <ClCompile Include="SceneBase.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SceneTest.cpp" />
     <ClCompile Include="ShaderBase.cpp" />
     <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TitleScene.cpp" />
-    <ClCompile Include="VertexShaderManager.cpp" />
+    <ClCompile Include="Utility.cpp" />
+    <ClCompile Include="VertexShader.cpp" />
     <ClCompile Include="WindowManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FbxDefine.h" />
+    <ClInclude Include="FbxLoadManager.h" />
     <ClInclude Include="RenderDefine.h" />
     <ClInclude Include="DeviceManager.h" />
     <ClInclude Include="ErrorMessageDefine.h" />
@@ -155,7 +165,7 @@
     <ClInclude Include="FpsManager.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="PixelShaderManager.h" />
+    <ClInclude Include="PixelShader.h" />
     <ClInclude Include="RenderManager.h" />
     <ClInclude Include="SceneBase.h" />
     <ClInclude Include="SceneDefine.h" />
@@ -164,9 +174,21 @@
     <ClInclude Include="ShaderBase.h" />
     <ClInclude Include="ShaderDefine.h" />
     <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="TitleScene.h" />
-    <ClInclude Include="VertexShaderManager.h" />
+    <ClInclude Include="Utility.h" />
+    <ClInclude Include="VertexShader.h" />
     <ClInclude Include="WindowManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="pixel.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="vertex.hlsl">
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

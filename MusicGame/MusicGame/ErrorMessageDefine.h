@@ -16,7 +16,7 @@
 
 #define ERROR_CELL (std::string)__FILE__ + " : " + std::to_string(__LINE__)
 	//不明なエラー
-#define DEFAULT_ERROR "エラーがエラーなのにエラーじゃないのん..."
+#define ERROR_DEFAULT "エラーがエラーなのにエラーじゃないのん..."
 //シェーダ関係
 #define	ERROR_PIXEL_SHADER_RESOURCE_NOT_FOUND	"ピクセルシェーダが見つかりません。"
 #define	ERROR_PIXEL_SHADER_RESOURCE_CORRUPTION "ピクセルシェーダが破損しています。"

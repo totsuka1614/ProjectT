@@ -39,6 +39,36 @@
     <Filter Include="シーン\テスト">
       <UniqueIdentifier>{ff073acc-bda6-4347-bd79-547040a637a9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="システム関係\テクスチャ">
+      <UniqueIdentifier>{32ba0f29-9eb3-4d97-8dcb-3a1849a1a309}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="シーン\基底">
+      <UniqueIdentifier>{c5b8b424-9030-4034-95d9-1f12daabdd09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="シーン\管理">
+      <UniqueIdentifier>{ded05885-522b-4c6e-bce7-992c5b9113d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="シーン\タイトル">
+      <UniqueIdentifier>{05abe126-352c-4c70-a94e-d8b8d6106790}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="モデル">
+      <UniqueIdentifier>{50dfb65e-9b4d-4c45-8f91-f76a76a769ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="モデル\Fbx">
+      <UniqueIdentifier>{9c37e123-43f5-46e3-a0ad-3d63eaf72edd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム関係\シェーダ\ピクセル">
+      <UniqueIdentifier>{299623e9-d8b0-4d84-a73d-e0cf8c02fb63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム関係\シェーダ\頂点">
+      <UniqueIdentifier>{9811f8bf-0821-43af-996e-9e9b7f942943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム関係\シェーダ\基底">
+      <UniqueIdentifier>{7ac85c8a-9b52-49cf-b1d4-c7fe5cecf5dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム関係\シェーダ\管理">
+      <UniqueIdentifier>{8f3aa14a-633b-415d-92ab-956bee2a7dcd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -53,18 +83,6 @@
     <ClCompile Include="Input.cpp">
       <Filter>システム関係\入力</Filter>
     </ClCompile>
-    <ClCompile Include="ShaderManager.cpp">
-      <Filter>システム関係\シェーダ</Filter>
-    </ClCompile>
-    <ClCompile Include="VertexShaderManager.cpp">
-      <Filter>システム関係\シェーダ</Filter>
-    </ClCompile>
-    <ClCompile Include="PixelShaderManager.cpp">
-      <Filter>システム関係\シェーダ</Filter>
-    </ClCompile>
-    <ClCompile Include="ShaderBase.cpp">
-      <Filter>システム関係\シェーダ</Filter>
-    </ClCompile>
     <ClCompile Include="ErrorMessageManager.cpp">
       <Filter>システム関係\エラー</Filter>
     </ClCompile>
@@ -74,17 +92,38 @@
     <ClCompile Include="RenderManager.cpp">
       <Filter>システム関係\描画</Filter>
     </ClCompile>
-    <ClCompile Include="SceneBase.cpp">
-      <Filter>シーン</Filter>
-    </ClCompile>
-    <ClCompile Include="TitleScene.cpp">
-      <Filter>シーン</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>シーン</Filter>
-    </ClCompile>
     <ClCompile Include="SceneTest.cpp">
       <Filter>シーン\テスト</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>システム関係\テクスチャ</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>システム関係\テクスチャ</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneBase.cpp">
+      <Filter>シーン\基底</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>シーン\管理</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>シーン\タイトル</Filter>
+    </ClCompile>
+    <ClCompile Include="FbxLoadManager.cpp">
+      <Filter>モデル\Fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="PixelShader.cpp">
+      <Filter>システム関係\シェーダ\ピクセル</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexShader.cpp">
+      <Filter>システム関係\シェーダ\頂点</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderBase.cpp">
+      <Filter>システム関係\シェーダ\基底</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderManager.cpp">
+      <Filter>システム関係\シェーダ\管理</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -99,18 +138,6 @@
     </ClInclude>
     <ClInclude Include="Input.h">
       <Filter>システム関係\入力</Filter>
-    </ClInclude>
-    <ClInclude Include="ShaderManager.h">
-      <Filter>システム関係\シェーダ</Filter>
-    </ClInclude>
-    <ClInclude Include="VertexShaderManager.h">
-      <Filter>システム関係\シェーダ</Filter>
-    </ClInclude>
-    <ClInclude Include="PixelShaderManager.h">
-      <Filter>システム関係\シェーダ</Filter>
-    </ClInclude>
-    <ClInclude Include="ShaderBase.h">
-      <Filter>システム関係\シェーダ</Filter>
     </ClInclude>
     <ClInclude Include="ErrorMessageManager.h">
       <Filter>システム関係\エラー</Filter>
@@ -130,20 +157,52 @@
     <ClInclude Include="RenderDefine.h">
       <Filter>システム関係\描画</Filter>
     </ClInclude>
-    <ClInclude Include="SceneBase.h">
-      <Filter>シーン</Filter>
-    </ClInclude>
-    <ClInclude Include="TitleScene.h">
-      <Filter>シーン</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>シーン</Filter>
-    </ClInclude>
     <ClInclude Include="SceneTest.h">
       <Filter>シーン\テスト</Filter>
     </ClInclude>
     <ClInclude Include="SceneDefine.h">
       <Filter>シーン</Filter>
     </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>システム関係\テクスチャ</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>システム関係\テクスチャ</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneBase.h">
+      <Filter>シーン\基底</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>シーン\管理</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleScene.h">
+      <Filter>シーン\タイトル</Filter>
+    </ClInclude>
+    <ClInclude Include="FbxLoadManager.h">
+      <Filter>モデル\Fbx</Filter>
+    </ClInclude>
+    <ClInclude Include="FbxDefine.h">
+      <Filter>モデル\Fbx</Filter>
+    </ClInclude>
+    <ClInclude Include="PixelShader.h">
+      <Filter>システム関係\シェーダ\ピクセル</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexShader.h">
+      <Filter>システム関係\シェーダ\頂点</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderBase.h">
+      <Filter>システム関係\シェーダ\基底</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderManager.h">
+      <Filter>システム関係\シェーダ\管理</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="vertex.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </FxCompile>
+    <FxCompile Include="pixel.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
