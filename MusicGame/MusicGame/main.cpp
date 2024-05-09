@@ -13,6 +13,7 @@
 #include "DeviceManager.h"
 #include "ShaderManager.h"
 #include "RenderManager.h"
+#include "FbxLoadManager.h"
 #include "SceneManager.h"
 #include "Input.h"
 //ƒ‰ƒCƒuƒ‰ƒŠ‚ÌƒŠƒ“ƒN
@@ -91,6 +92,7 @@ void Init()
 {
 	DeviceManager->Init();
 	RenderManager->Init();
+	FbxLoadManager->Create();
 	CInput::Init();
 }
 /******************************************************************************

@@ -23,7 +23,7 @@ public:
 	CErrorMessageManager() {};
 	~CErrorMessageManager() {};
 
-	void Output(const char*,std::string);
+	void Output(const char*,std::string file_cell= "default");
 
 	static CErrorMessageManager* Get() { return m_pMessageManager; }
 private:

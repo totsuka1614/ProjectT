@@ -35,12 +35,13 @@ CShaderManager* CShaderManager::m_pShaderManager = &g_shader;	//現在
 ******************************************************************************/
 void CShaderManager::Create()
 {
-	//頂点シェーダ読み込み
-	m_pVertexShader->Create();
-	
-	//ピクセルシェーダ読み込み
-	for (auto file_path : g_cPixelShaderFilePath) {
-		m_pPixelShader->Create(file_path);
+	for (int i = 0; i < eVertexShaderType::Max_Vertex_Num; i++) {
+		//頂点シェーダ読み込み
+		m_pVertexShader[i]->Create(g_cVertexShaderFilePath[i]);
+	}
+	for (int i = 0; i < ePixelShaderType::Max_Pixel_Num; i++) {
+		//ピクセルシェーダ読み込み
+		m_pPixelShader[i]->Create(g_cPixelShaderFilePath[i]);
 	}
 }
 /******************************************************************************
@@ -53,18 +54,18 @@ void CShaderManager::Create()
 * @attention  
 * 
 ******************************************************************************/
-void CShaderManager::SetUp(VertexShaderType vertex_type, PixelShaderType pixel_type)
+void CShaderManager::SetUp(eVertexShaderType vertex_type, ePixelShaderType pixel_type)
 {
 	auto deviceContext = DeviceManager->GetDeviceContext();
 	// VerteXShader、PixelShaderを設定
 	deviceContext->VSSetShader(
-		m_pVertexShader->GetVertexShader(vertex_type),	// 使用するVertexShder
+		m_pVertexShader[vertex_type]->GetVertexShader(),	// 使用するVertexShder
 		nullptr,
 		0);									// ClassInstanceの数
 	deviceContext->PSSetShader(
-		m_pPixelShader->GetPixelShader(pixel_type),
+		m_pPixelShader[pixel_type]->GetPixelShader(),
 		nullptr,
 		0);
 
-	deviceContext->IASetInputLayout(m_pVertexShader->GetInputLayout());
+	deviceContext->IASetInputLayout(m_pVertexShader[vertex_type]->GetInputLayout());
 }

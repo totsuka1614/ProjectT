@@ -138,7 +138,13 @@
   <ItemGroup>
     <ClCompile Include="DeviceManager.cpp" />
     <ClCompile Include="ErrorMessageManager.cpp" />
+    <ClCompile Include="FbxBuffer.cpp" />
+    <ClCompile Include="FbxLoad.cpp" />
+    <ClCompile Include="FbxLoadAnimation.cpp" />
+    <ClCompile Include="FbxLoadBone.cpp" />
     <ClCompile Include="FbxLoadManager.cpp" />
+    <ClCompile Include="FbxLoadMaterial.cpp" />
+    <ClCompile Include="FbxLoadMesh.cpp" />
     <ClCompile Include="FpsManager.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
@@ -156,7 +162,10 @@
     <ClCompile Include="WindowManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FbxBuffer.h" />
     <ClInclude Include="FbxDefine.h" />
+    <ClInclude Include="FbxLoad.h" />
+    <ClInclude Include="FbxLoadDefine.h" />
     <ClInclude Include="FbxLoadManager.h" />
     <ClInclude Include="RenderDefine.h" />
     <ClInclude Include="DeviceManager.h" />

@@ -21,8 +21,8 @@ public:
 	CPixelShader():m_pPixelShader(nullptr) {};
 	~CPixelShader() { SAFE_RELEASE(m_pPixelShader); };
 	//ピクセルシェーダ作成関数
-	virtual bool Create(const char* file_name);
-	ID3D11PixelShader* GetPixelShader(PixelShaderType type) { return &m_pPixelShader[type]; }
+	virtual bool Create(const char*);
+	ID3D11PixelShader* GetPixelShader() { return m_pPixelShader; }
 
 private:
 	ID3D11PixelShader* m_pPixelShader;	//シェーダポインタ

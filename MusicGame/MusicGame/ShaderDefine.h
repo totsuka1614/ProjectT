@@ -10,11 +10,15 @@
 ******************************************************************************/
 #pragma once
 
-enum PixelShaderType {
+enum ePixelShaderType {
 	Pixel,
+
+	Max_Pixel_Num
 };
-enum VertexShaderType {
+enum eVertexShaderType {
 	Vertex,
+
+	Max_Vertex_Num
 };
 
 //頂点シェーダファイルパス

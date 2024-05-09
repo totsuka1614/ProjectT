@@ -19,28 +19,23 @@
 #define ShaderManager CShaderManager::Get()
 #endif // !ShaderManager
 
-
 class CShaderManager
 {
 public:
-	CShaderManager() : m_pVertexShader(nullptr), m_pPixelShader(nullptr){
-		m_pPixelShader = new CPixelShader;
-		m_pVertexShader = new CVertexShader;
+	CShaderManager() {
+		*m_pVertexShader = new CVertexShader[eVertexShaderType::Max_Vertex_Num];
+		*m_pPixelShader = new CPixelShader[ePixelShaderType::Max_Pixel_Num];
 	};
-	~CShaderManager() {
-		SAFE_DELETE(m_pPixelShader);
-		SAFE_DELETE(m_pVertexShader);
-	};
+	~CShaderManager() {};
 
 	void Create();
-	void SetUp(VertexShaderType vertex_type,PixelShaderType pixel_type);
+	void SetUp(eVertexShaderType vertex_type, ePixelShaderType pixel_type);
 	static CShaderManager* Get() { return m_pShaderManager; }
-	ID3D11VertexShader* GetVertexShader(VertexShaderType type) { return m_pVertexShader->GetVertexShader(type); }
-	ID3D11PixelShader* GetPixelShader(PixelShaderType type) { return m_pPixelShader->GetPixelShader(type); }
+	ID3D11VertexShader* GetVertexShader(eVertexShaderType type) { return m_pVertexShader[type]->GetVertexShader(); }
+	ID3D11PixelShader* GetPixelShader(ePixelShaderType type) { return m_pPixelShader[type]->GetPixelShader(); }
 private:
 	static CShaderManager* m_pShaderManager;
 private:
-	CVertexShader* m_pVertexShader;
-	CPixelShader* m_pPixelShader;
+	CVertexShader* m_pVertexShader[eVertexShaderType::Max_Vertex_Num];
+	CPixelShader* m_pPixelShader[ePixelShaderType::Max_Pixel_Num];
 };
-

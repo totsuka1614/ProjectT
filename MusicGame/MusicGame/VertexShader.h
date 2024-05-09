@@ -21,9 +21,9 @@ public:
 	CVertexShader() {};
 	~CVertexShader() {};
 	//頂点シェーダ作成関数
-	virtual bool Create();
+	virtual bool Create(const char*);
 	//ゲッター
-	ID3D11VertexShader* GetVertexShader(VertexShaderType type) { return &m_pVertexShader[type]; }
+	ID3D11VertexShader* GetVertexShader() { return m_pVertexShader; }
 	ID3D11InputLayout* GetInputLayout() { return m_pInputLayout; }
 private:
 	ID3D11VertexShader* m_pVertexShader;	//シェーダポインタ

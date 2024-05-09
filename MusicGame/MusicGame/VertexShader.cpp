@@ -25,21 +25,18 @@
 * @note       頂点シェーダ作成(成功でtrue)
 * @attention
 ******************************************************************************/
-bool CVertexShader::Create()
+bool CVertexShader::Create(const char* file_path)
 {
 	ID3D11Device* device = DeviceManager->GetDevice();
 
 	//シェーダ読み込み
-	for (auto file_path : g_cVertexShaderFilePath) {
-		if (CShaderBase::Create(device, file_path) == false) {
-			ErrorMessage->Output(ERROR_VERTEX_SHADER_RESOURCE_NOT_FOUND, ERROR_CELL);
-		}
-		//ピクセルシェーダ作成
-		if (FAILED(device->CreateVertexShader(m_pData, m_lSize, nullptr, &m_pVertexShader))) {
-			ErrorMessage->Output(ERROR_VERTEX_SHADER_RESOURCE_CORRUPTION, ERROR_CELL);
-		}
+	if (CShaderBase::Create(device, file_path) == false) {
+		ErrorMessage->Output(ERROR_VERTEX_SHADER_RESOURCE_NOT_FOUND, ERROR_CELL);
 	}
-
+	//ピクセルシェーダ作成
+	if (FAILED(device->CreateVertexShader(m_pData, m_lSize, nullptr, &m_pVertexShader))) {
+		ErrorMessage->Output(ERROR_VERTEX_SHADER_RESOURCE_CORRUPTION, ERROR_CELL);
+	}
 
 	return true;
 }

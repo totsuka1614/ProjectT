@@ -69,6 +69,12 @@
     <Filter Include="システム関係\シェーダ\管理">
       <UniqueIdentifier>{8f3aa14a-633b-415d-92ab-956bee2a7dcd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="モデル\Fbx\Load">
+      <UniqueIdentifier>{b32c9c55-8575-4840-868f-81f89a26a6fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="モデル\Fbx\Load\各種ロード">
+      <UniqueIdentifier>{3e4ed22f-5f37-4273-99c2-5a78235d70ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -110,9 +116,6 @@
     <ClCompile Include="TitleScene.cpp">
       <Filter>シーン\タイトル</Filter>
     </ClCompile>
-    <ClCompile Include="FbxLoadManager.cpp">
-      <Filter>モデル\Fbx</Filter>
-    </ClCompile>
     <ClCompile Include="PixelShader.cpp">
       <Filter>システム関係\シェーダ\ピクセル</Filter>
     </ClCompile>
@@ -124,6 +127,27 @@
     </ClCompile>
     <ClCompile Include="ShaderManager.cpp">
       <Filter>システム関係\シェーダ\管理</Filter>
+    </ClCompile>
+    <ClCompile Include="FbxLoad.cpp">
+      <Filter>モデル\Fbx\Load</Filter>
+    </ClCompile>
+    <ClCompile Include="FbxLoadManager.cpp">
+      <Filter>モデル\Fbx\Load</Filter>
+    </ClCompile>
+    <ClCompile Include="FbxLoadAnimation.cpp">
+      <Filter>モデル\Fbx\Load\各種ロード</Filter>
+    </ClCompile>
+    <ClCompile Include="FbxLoadBone.cpp">
+      <Filter>モデル\Fbx\Load\各種ロード</Filter>
+    </ClCompile>
+    <ClCompile Include="FbxLoadMaterial.cpp">
+      <Filter>モデル\Fbx\Load\各種ロード</Filter>
+    </ClCompile>
+    <ClCompile Include="FbxLoadMesh.cpp">
+      <Filter>モデル\Fbx\Load\各種ロード</Filter>
+    </ClCompile>
+    <ClCompile Include="FbxBuffer.cpp">
+      <Filter>モデル\Fbx</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -178,9 +202,6 @@
     <ClInclude Include="TitleScene.h">
       <Filter>シーン\タイトル</Filter>
     </ClInclude>
-    <ClInclude Include="FbxLoadManager.h">
-      <Filter>モデル\Fbx</Filter>
-    </ClInclude>
     <ClInclude Include="FbxDefine.h">
       <Filter>モデル\Fbx</Filter>
     </ClInclude>
@@ -195,6 +216,18 @@
     </ClInclude>
     <ClInclude Include="ShaderManager.h">
       <Filter>システム関係\シェーダ\管理</Filter>
+    </ClInclude>
+    <ClInclude Include="FbxLoad.h">
+      <Filter>モデル\Fbx\Load</Filter>
+    </ClInclude>
+    <ClInclude Include="FbxLoadManager.h">
+      <Filter>モデル\Fbx\Load</Filter>
+    </ClInclude>
+    <ClInclude Include="FbxLoadDefine.h">
+      <Filter>モデル\Fbx\Load</Filter>
+    </ClInclude>
+    <ClInclude Include="FbxBuffer.h">
+      <Filter>モデル\Fbx</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
